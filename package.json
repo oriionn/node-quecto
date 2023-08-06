@@ -1,6 +1,6 @@
 {
   "name": "quecto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official wrapper for Quecto (A Open Source Link Shortener)",
   "main": "dist/app.js",
   "scripts": {
@@ -17,5 +17,9 @@
   },
   "dependencies": {
     "axios": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oriionn/node-quecto.git"
   }
 }
