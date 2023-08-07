@@ -10,15 +10,17 @@ export class Quecto {
     this.instanceUrl = this.requester.instanceUrl
   }
 
-  public async shortUrl (url: string): Promise<Response> {
+  public async shortUrl (url: string, password: String): Promise<Response> {
     const formData = new FormData()
     formData.append('link', url)
+    if (password !== '') formData.append('password', password);
     return (await this.requester.post('shorten', formData))
   }
 
-  public async unshortUrl (url: string): Promise<Response> {
+  public async unshortUrl (url: string, password: String): Promise<Response> {
     // @ts-expect-error
     const code: String = url.split('/').pop()
+    if (password !== '') return (await this.requester.get(`s/${code.toString()}?password=${password}`))
     return (await this.requester.get(`s/${code.toString()}`))
   }
 

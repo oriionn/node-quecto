@@ -1,6 +1,6 @@
 {
   "name": "quecto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official wrapper for Quecto (A Open Source Link Shortener)",
   "main": "dist/app.js",
   "scripts": {

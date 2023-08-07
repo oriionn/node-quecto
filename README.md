@@ -21,7 +21,8 @@ const client = new Quecto("https://s.oriondev.fr");
 const { Quecto } = require('quecto');
 const client = new Quecto("https://s.oriondev.fr");
 
-client.shortUrl("https://example.com").then((res) => {
+// Password is optional
+client.shortUrl("https://example.com", "password").then((res) => {
     console.log(res.shorten);
 }).catch((err) => {
     console.error(err);
@@ -33,7 +34,8 @@ client.shortUrl("https://example.com").then((res) => {
 const { Quecto } = require('quecto');
 const client = new Quecto("https://s.oriondev.fr");
 
-client.unshortUrl("https://s.oriondev.fr/s/189cb2abab6ce").then((res) => {
+// Password is optional
+client.unshortUrl("https://s.oriondev.fr/s/189cb2abab6ce", "password").then((res) => {
     console.log(res.url);
 }).catch((err) => {
     console.error(err);
